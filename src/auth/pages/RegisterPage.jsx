@@ -12,6 +12,14 @@ export const RegisterPage = () => {
         <Grid container>
           <Grid item xs={12} sx={{ mt: 2 }}>
             <TextField
+              label="Nombre completo"
+              type="text"
+              placeholder="Tus nombres y apellidos"
+              fullWidth
+            />
+          </Grid>
+          <Grid item xs={12} sx={{ mt: 2 }}>
+            <TextField
               label="Correo"
               type="email"
               placeholder="your@email.com"
@@ -28,19 +36,15 @@ export const RegisterPage = () => {
           </Grid>
 
           <Grid container spacing={2} sx={{ mb: 2, mt: 1 }}>
-            <Grid item xs={12} sm={6}>
-              <Button variant="contained" fullWidth>Login</Button>
+            <Grid item xs={12}>
+              <Button variant="contained" fullWidth>Crear Cuenta</Button>
             </Grid>
-            <Grid item xs={12} sm={6}>
-              <Button variant="contained" fullWidth><Google /><Typography>oogle</Typography></Button>
-            </Grid>
-
             <Grid container direction="row" justifyContent="end">
-              <Link component={RouterLink} color="inherit" to="/auth/register">
-                Crear una cuenta
+              <Link component={RouterLink} color="inherit" to="/auth/login
+              ">
+                ¿Ya tienes una cuenta?, Ingresar.
               </Link>
             </Grid>
-
           </Grid>
         </Grid>
 
